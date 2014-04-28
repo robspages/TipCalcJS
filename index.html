@@ -1,0 +1,28 @@
+  <!doctype html>
+  <html>
+  <head>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/styles.css" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  </head>
+    <h1>Tip Calculator</h1>
+    <fieldset id="tipForm">
+      <ul>
+        <li>
+          <label class="questionLabel">Total Bill Amount:</label>
+          <span class="inputOverlay">$</span>
+          <input type="text" id="billAmount" value="0.00" pattern="(d{3})([.])(d{2})" required/><label for="billAmount" value="$" />
+        </li>
+        <li>
+          <label class="questionLabel">Tip Percentage</label>
+          <span id="currentPercentage"></span>
+          <input type="range" id="tipPercentage" min="1" max="30" step="1" value="15" />
+        </li>
+      </ul>
+    </fieldset>
+  <section id="output">
+    $<span id="tipAmount"></span>
+  </section>
+  <script src="js/tipCalc.js"></script>
+</body>
+</html>
